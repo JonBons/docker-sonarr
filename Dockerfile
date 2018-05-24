@@ -10,7 +10,8 @@ LABEL maintainer="sparklyballs"
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
-RUN apt-get install software-properties-common
+RUN apt-get update && apt-get install -y \
+    software-properties-common
 
 RUN \
  echo "**** add sonarr repository ****" && \
