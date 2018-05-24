@@ -10,6 +10,8 @@ LABEL maintainer="sparklyballs"
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
+RUN apt-get install software-properties-common
+
 RUN \
  echo "**** add sonarr repository ****" && \
  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC && \
