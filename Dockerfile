@@ -27,7 +27,7 @@ RUN \
 	/var/tmp/*
 
 # Install ffmpeg
-RUN sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+RUN add-apt-repository ppa:jonathonf/ffmpeg-3
 RUN apt-get update && apt-get install -y \
     ffmpeg
 
